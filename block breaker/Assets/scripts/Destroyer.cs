@@ -8,24 +8,38 @@ public class Destroyer : MonoBehaviour
     [SerializeField] GameObject sparkle;
     Level level;
     score score;
-	
+    [SerializeField] int maxhits;
+    [SerializeField]int hits = 0;
 	void Start()
 	{
 		level=FindObjectOfType<Level>();
         score = FindObjectOfType<score>();
-        level.countblocks();
+        if(tag=="breakable")
+        {
+            level.countblocks();
+        }
+            
+       
 	}
 	
 	
   private void OnCollisionEnter2D(Collision2D collision)
   {
-		
-	
-  	  Destroy(gameObject);
+        
+	  if(tag=="breakable"&& hits>=maxhits)
+        {
+            hits++;
+            Destroy(gameObject);
+            level.decrementblock();
+        }
+  	 
       effect();
 	  AudioSource.PlayClipAtPoint(myaudio,new Vector2(5, 1));
-	  level.decrementblock();
-       score.addscore();
+        if (tag == "breakable")
+        {
+            
+            score.addscore();
+        }
   }
 
     public void effect()

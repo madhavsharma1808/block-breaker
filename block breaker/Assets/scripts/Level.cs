@@ -7,13 +7,13 @@ public class Level : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] int blocks;
+ 
     
 
 	public void countblocks()
-	{
-		blocks++;
-
-	}
+    { 
+         blocks++;
+    }
 	
 	public void decrementblock()
 	{

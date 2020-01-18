@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/STARTING SCENE.unity
+    guid: 802fdd71f2a6f714986fe72cd220133d
+  - enabled: 1
+    path: Assets/Scenes/core game.unity
+    guid: dcdaff3686fde8144aa05c312b639596
+  - enabled: 1
+    path: Assets/Scenes/second level.unity
+    guid: de42721a22e585645b7d197d0b8429a3
+  - enabled: 1
+    path: Assets/Scenes/congo.unity
+    guid: afdc8ce8c0a3f8f40a67049a0c391681
+  - enabled: 1
+    path: Assets/Scenes/win.unity
+    guid: f48d196f0fba6e440a7ee5f01681dc65
   m_configObjects: {}
