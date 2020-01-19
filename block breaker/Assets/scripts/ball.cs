@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ball : MonoBehaviour
 {
-	[SerializeField] paddle paddle1;
-	Vector2 difference;
+    [SerializeField] paddle paddle1;
+    [SerializeField] float randomvelocity;
+    Vector2 difference;
 	int flag=0;
 	
     // Start is called before the first frame update
@@ -39,4 +40,9 @@ public class ball : MonoBehaviour
 			
 		}
 	}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Vector2 cordin = new Vector2 (Random.Range(0f,randomvelocity), Random.Range(0f, randomvelocity));
+        GetComponent<Rigidbody2D>().velocity += cordin; 
+    }
 }

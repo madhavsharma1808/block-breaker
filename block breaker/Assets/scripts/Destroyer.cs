@@ -10,6 +10,7 @@ public class Destroyer : MonoBehaviour
     score score;
     [SerializeField] int maxhits;
     [SerializeField]int hits = 0;
+    [SerializeField] Sprite[] demote;
 	void Start()
 	{
 		level=FindObjectOfType<Level>();
@@ -26,14 +27,12 @@ public class Destroyer : MonoBehaviour
   private void OnCollisionEnter2D(Collision2D collision)
   {
         
-	  if(tag=="breakable"&& hits>=maxhits)
+	  if(tag=="breakable")
         {
-            hits++;
-            Destroy(gameObject);
-            level.decrementblock();
+            hitscheck();
         }
-  	 
-      effect();
+
+        effect();
 	  AudioSource.PlayClipAtPoint(myaudio,new Vector2(5, 1));
         if (tag == "breakable")
         {
@@ -41,6 +40,21 @@ public class Destroyer : MonoBehaviour
             score.addscore();
         }
   }
+
+    private void hitscheck()
+    {
+        hits++;
+        if (hits >= maxhits)
+        {
+            Destroy(gameObject);
+            level.decrementblock();
+        }
+        else
+        {
+            int spriteindex = hits - 1;
+            GetComponent<SpriteRenderer>().sprite = demote[spriteindex];
+        }
+    }
 
     public void effect()
     {

@@ -122,3 +122,7 @@ MonoBehaviour:
   myaudio: {fileID: 8300000, guid: 55e9805909166e34781f5278eccb0ac7, type: 3}
   sparkle: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
   maxhits: 2
+  hits: 0
+  demote:
+  - {fileID: 21300000, guid: e9350b23a3d914c4aa96bac40918a2b0, type: 3}
+  - {fileID: 21300000, guid: dfb0bb099b22dae4d9b6240467185fec, type: 3}
