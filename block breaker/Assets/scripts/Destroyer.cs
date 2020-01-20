@@ -58,7 +58,10 @@ public class Destroyer : MonoBehaviour
 
     public void effect()
     {
-        GameObject sparkles = Instantiate(sparkle, transform.position, transform.rotation);
-        Destroy(sparkles,1f);
+        if (tag == "breakable")
+        {
+            GameObject sparkles = Instantiate(sparkle, transform.position, transform.rotation);
+            Destroy(sparkles, 1f);
+        }
     }
 }

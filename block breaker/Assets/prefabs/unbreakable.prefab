@@ -121,3 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myaudio: {fileID: 8300000, guid: 55e9805909166e34781f5278eccb0ac7, type: 3}
   sparkle: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
+  maxhits: 0
+  hits: 0
+  demote: []

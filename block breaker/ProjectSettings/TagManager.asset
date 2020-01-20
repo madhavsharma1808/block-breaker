@@ -6,6 +6,7 @@ TagManager:
   tags:
   - breakable
   - unbreakable
+  - one time
   layers:
   - Default
   - TransparentFX
