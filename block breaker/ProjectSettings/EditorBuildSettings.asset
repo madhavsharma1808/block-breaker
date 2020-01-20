@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/second level.unity
     guid: 1c83e7755ffa2014797d775151c76302
   - enabled: 1
+    path: Assets/Scenes/third level.unity
+    guid: 7c2c52e2e9af9ab4498c94c9b0b46ea3
+  - enabled: 1
     path: Assets/Scenes/congo.unity
     guid: afdc8ce8c0a3f8f40a67049a0c391681
   - enabled: 1

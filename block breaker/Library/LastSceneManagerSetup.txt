@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/second level.unity
+- path: Assets/Scenes/congo.unity
   isLoaded: 1
   isActive: 1
