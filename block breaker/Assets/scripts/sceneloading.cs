@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class sceneloading : MonoBehaviour
 
 {
-    score score;
+   
     public void loadnextscene()
 	{
 		int currentindex=SceneManager.GetActiveScene().buildIndex;    //This calls the class SceneManager and then get the index of the current active scene
@@ -15,9 +15,10 @@ public class sceneloading : MonoBehaviour
 
 	public void playagain()
 	{
-        score = FindObjectOfType<score>();
-        score.reset();
-		SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
+        FindObjectOfType<score>().reset();
+        
+		
 	}
 
 	public void QuitGame()
